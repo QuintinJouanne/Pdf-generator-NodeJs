@@ -1,18 +1,19 @@
-const options = {
-  format: 'A3',
+module.exports = {
+  formate: 'A3',
   orientation: 'portrait',
-  border: '8mm',
+  border: '2mm',
   header: {
     height: '15mm',
-    contents: '<div style="text-align: center;">Author: Shyam Hajare</div>',
+    contents:
+      '<h4 style=" color: red;font-size:20;font-weight:800;text-align:center;">CUSTOMER INVOICE</h4>',
   },
   footer: {
     height: '20mm',
     contents: {
       first: 'Cover page',
-      2: 'Second page', // Any page number is working. 1-based index
+      2: 'Second page',
       default:
-        '<span style="color: #444;">{{page}}</span>/<span>{{pages}}</span>', // fallback value
+        '<span style="color: #444;">{{page}}</span>/<span>{{pages}}</span>',
       last: 'Last Page',
     },
   },
